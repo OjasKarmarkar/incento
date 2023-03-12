@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "295435902126",
+    "project_id": "loc-outliers",
+    "storage_bucket": "loc-outliers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295435902126:android:87c56d6445d9425361e13f",
+        "android_client_info": {
+          "package_name": "com.example.incento_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295435902126-85ea298g7dmto539k9irs600fi8pb7jn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgdsUoFNeigvRZznuKJ6mnzVKHyDJ7yJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "295435902126-85ea298g7dmto539k9irs600fi8pb7jn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
