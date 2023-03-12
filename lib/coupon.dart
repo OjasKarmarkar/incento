@@ -44,22 +44,4 @@ class Coupons {
     updatedAt = json['updatedAt'];
     iV = json['__v'];
   }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data =  Map<String, dynamic>();
-    data['_id'] = sId;
-    data['company_name'] = companyName;
-    data['creator_email'] = creatorEmail;
-    data['product_categories'] = productCategories;
-    data['expired'] = expired;
-    data['code'] = code;
-    data['redeem_count'] = redeemCount;
-    data['verify_count'] = verifyCount;
-    data['max_count'] = maxCount;
-    data['expires_at'] = expiresAt;
-    data['createdAt'] = createdAt;
-    data['updatedAt'] = updatedAt;
-    data['__v'] = iV;
-    return data;
-  }
 }

@@ -11,9 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
 
-  dio:
-  http:
-  coupon_uikit:
+  dio: ^5.0.2
+  http: ^0.13.5
+  coupon_uikit: ^0.2.0
 
 dev_dependencies:
   flutter_test:

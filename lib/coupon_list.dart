@@ -5,7 +5,7 @@ import 'package:incento/data_source.dart';
 import 'coupon.dart';
 
 class MyCoupons extends StatefulWidget {
-  const MyCoupons({required this.apiKey});
+  const MyCoupons({super.key, required this.apiKey});
 
   final String apiKey;
 
@@ -14,8 +14,8 @@ class MyCoupons extends StatefulWidget {
 }
 
 class _MyCouponsState extends State<MyCoupons> {
-  Color primaryColor = Color(0xffcbf3f0);
-  Color secondaryColor = Color(0xff368f8b);
+  Color primaryColor = const Color(0xffcbf3f0);
+  Color secondaryColor = const Color(0xff368f8b);
   List<Coupons> cpns = [];
 
   Widget coupon(Coupons cp) {

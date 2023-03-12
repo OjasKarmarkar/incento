@@ -182,8 +182,6 @@ class BaseNetwork {
     // debugPrint(Injector.prefs.getString(PrefKeys.token));
     BaseOptions options = BaseOptions(
         baseUrl: fullUrl,
-        connectTimeout: 20000,
-        receiveTimeout: 3000,
         headers: headers);
 
     dio.options = options;

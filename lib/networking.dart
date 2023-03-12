@@ -147,7 +147,6 @@ class BaseNetwork {
       }
     }).catchError((e) {
       if (e is DioError) {
-        print(e.response?.statusCode);
         commonResponse = CommonResponse.fromJson(e.response?.data);
         debugPrint("err ==== ${e.response}");
         errCompletion(commonResponse);
@@ -179,7 +178,7 @@ class BaseNetwork {
       HttpHeaders.acceptHeader: acceptHeader,
       HttpHeaders.contentTypeHeader: contentTypeHeader,
     };
-    final fullUrl = baseUrl + "/" + partUrl;
+    final fullUrl = '$baseUrl/$partUrl';
     //debugPrint(fullUrl);
     // debugPrint(Injector.prefs.getString(PrefKeys.token));
     BaseOptions options = BaseOptions(baseUrl: fullUrl, headers: headers);
