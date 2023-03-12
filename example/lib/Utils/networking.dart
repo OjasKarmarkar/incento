@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:incento_demo/Models/common_response.dart';
 
 class BaseNetwork {
-  static const String baseUrl = "https://incento-app-backend.up.railway.app/api";
+  static const String baseUrl = "http://localhost:7000/api";
 
   static Future<CommonResponse> get(
       String partUrl,
