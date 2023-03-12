@@ -11,29 +11,27 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+This package can be easily integrated in any flutter application for generation and redeeming coupon codes for various e-commerce merchants and small scale businesses.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+1. Easy and seamless integration of coupon codes
+2. Simple UI to display all available coupons
+3. Obtain API_KEY to get started.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Users can get the API_KEY after registration of their company on our portal . The same API_KEY can be used for further usage of this package.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+There are two ways to get started:
 
-```dart
-const like = 'sample';
-```
+1. Using the provided built-in widget Coupons to access list of available coupons as per your API_KEY
+2. Using a user-defined voucher code and calling in the (verify) and (redeem) methods along with your payment service
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Issues and pull requests are always welcome 😄
+
+If you find this package useful for you and liked it, give it a like ❤️ and star the repo ⭐️ it would mean a lot!
