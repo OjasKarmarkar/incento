@@ -1,6 +1,6 @@
 # incento_demo
 
-A new Flutter project.
+This package can be easily integrated in any flutter application for generation and redeeming coupon codes for various e-commerce merchants and small scale businesses.
 
 ## Getting Started
 
