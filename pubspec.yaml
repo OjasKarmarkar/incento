@@ -1,7 +1,7 @@
 name: incento
 description: This package can be easily integrated in any flutter application for generation and redeeming coupon codes for various e-commerce merchants and small scale businesses.
 version: 0.0.1
-homepage:
+homepage: https://github.com/OjasKarmarkar/incento
 
 environment:
   sdk: '>=2.19.2 <3.0.0'
