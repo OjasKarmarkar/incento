@@ -43,11 +43,13 @@ class DataController extends GetxController {
   void editCart(Product pt) {
     if (cart.contains(pt)) {
       cart.remove(pt);
-      totalAmt -= pt.price ?? 0;
+      // totalAmt -= pt.price ?? 0;
     } else {
       cart.add(pt);
-      totalAmt += pt.price ?? 0;
+      // totalAmt += pt.price ?? 0;
     }
+    totalAmt = 0;
+    cart.forEach((element) => totalAmt += element.price ?? 0);
     update();
   }
 }

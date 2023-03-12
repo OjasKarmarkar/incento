@@ -242,7 +242,8 @@ class _CartScreenState extends State<CartScreen> {
                                                     await incentoSDK.verify({
                                                   "company_name": "myntra",
                                                   "coupon_code": cc.text,
-                                                  "category": "Shoes",
+                                                  "category": "hat",
+                                                  "amt" : controller.totalAmt,
                                                   "uid": "ojas"
                                                 });
                                                 if (data['status'] != null &&
@@ -252,7 +253,7 @@ class _CartScreenState extends State<CartScreen> {
                                                   showSnackbar("Incento-SDK",
                                                       data['status']);
                                                   openCheckout(
-                                                      controller.totalAmt);
+                                                      data['amt']?? controller.totalAmt);
                                                 } else {
                                                   showSnackbar("Incento-SDK",
                                                       data['status']);

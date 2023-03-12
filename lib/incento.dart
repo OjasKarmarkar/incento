@@ -32,10 +32,21 @@ class IncentoSDK {
       successCompletion: (CommonResponse cp) {
         res['status'] = EVENT_VERIFY_SUCCESS;
         res['message'] = cp.message ?? "";
+
+        if (cp.data != null && cp.data != {}) {
+          if (res['type'] == "percent") {
+            res['amt'] = options['amt'] - options['amt'] * cp.data['discount'];
+          } else {
+            res['amt'] = options['amt'] - cp.data['discount'];
+          }
+        }
+
+        print(res);
       },
       errCompletion: (CommonResponse cp) {
         res['status'] = EVENT_VERIFY_ERROR;
         res['message'] = cp.message ?? "";
+        res['amt'] = options['amt'];
       },
     );
     return res;

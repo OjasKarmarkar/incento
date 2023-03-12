@@ -6,7 +6,7 @@ import 'package:flutter/foundation.dart';
 import 'package:incento_demo/Models/common_response.dart';
 
 class BaseNetwork {
-  static const String baseUrl = "http://localhost:7000/api";
+  static const String baseUrl = "http://10.0.2.2:7000/api";
 
   static Future<CommonResponse> get(
       String partUrl,
@@ -40,6 +40,7 @@ class BaseNetwork {
       }
     }).catchError((e) {
       if (e is DioError) {
+        print(e);
         print(e.response);
         commonResponse = CommonResponse.fromJson(e.response?.data);
         debugPrint("err ==== ${e.response}");
@@ -117,7 +118,7 @@ class BaseNetwork {
   //   return commonResponse;
   // }
 
-    static Future<CommonResponse> put(
+  static Future<CommonResponse> put(
       String partUrl,
       dynamic body,
       void Function(CommonResponse) successCompletion,
@@ -180,9 +181,7 @@ class BaseNetwork {
     final fullUrl = baseUrl + "/" + partUrl;
     //debugPrint(fullUrl);
     // debugPrint(Injector.prefs.getString(PrefKeys.token));
-    BaseOptions options = BaseOptions(
-        baseUrl: fullUrl,
-        headers: headers);
+    BaseOptions options = BaseOptions(baseUrl: fullUrl, headers: headers);
 
     dio.options = options;
 
