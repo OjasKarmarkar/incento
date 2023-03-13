@@ -156,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                                 .spaceBetween,
                                                         children: [
                                                           Text(
-                                                            r'''$''' +
+                                                            r'''₹''' +
                                                                 ' ${controller.allProducts[index].price}',
                                                             style: Theme.of(
                                                                     context)

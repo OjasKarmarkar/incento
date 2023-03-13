@@ -34,10 +34,15 @@ class IncentoSDK {
         res['message'] = cp.message ?? "";
 
         if (cp.data != null && cp.data != {}) {
-          if (res['type'] == "percent") {
-            res['amt'] = options['amt'] - options['amt'] * cp.data['discount'];
+          if (cp.data['type'] == "percent") {
+            res['amt'] =
+                options['amt'] - (options['amt'] * cp.data['discount'] / 100);
           } else {
-            res['amt'] = options['amt'] - cp.data['discount'];
+            if (cp.data['discount'] > options['amt']) {
+              res['amt'] = 1;
+            } else {
+              res['amt'] = options['amt'] - cp.data['discount'];
+            }
           }
         }
 

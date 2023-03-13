@@ -16,7 +16,7 @@ class MyCoupons extends StatefulWidget {
 class _MyCouponsState extends State<MyCoupons> {
   Color primaryColor = const Color(0xffcbf3f0);
   Color secondaryColor = const Color(0xff368f8b);
-  List<Coupons> cpns = [];
+  List<Coupons> cpns = []; 
 
   Widget coupon(Coupons cp) {
     return CouponCard(

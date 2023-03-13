@@ -8,7 +8,7 @@ class DataController extends GetxController {
   List<Product> allProducts = <Product>[];
   List<Product> cart = <Product>[];
   bool isLoading = false;
-  int totalAmt = 0;
+  num totalAmt = 0;
   bool couponRedeemed = false;
 
   @override
@@ -25,6 +25,7 @@ class DataController extends GetxController {
         if (cp.data != null && cp.data != []) {
           for (var d in cp.data) {
             Product v = Product.fromJson(d);
+
             allProducts.add(v);
           }
         }
@@ -41,15 +42,16 @@ class DataController extends GetxController {
   }
 
   void editCart(Product pt) {
-    if (cart.contains(pt)) {
-      cart.remove(pt);
-      // totalAmt -= pt.price ?? 0;
-    } else {
+    final items = cart.where((element) => element.name == pt.name).toList();
+    if (items.isEmpty) {
       cart.add(pt);
-      // totalAmt += pt.price ?? 0;
+    } else {
+      cart.remove(pt);
     }
     totalAmt = 0;
     cart.forEach((element) => totalAmt += element.price ?? 0);
+    print(cart);
+    print(totalAmt);
     update();
   }
 }

@@ -11,7 +11,7 @@ class Product {
     id = json['id'];
     name = json['name'];
     imageUrl = json['imageUrl'];
-    price = json['price'];
+    price = json['price'] * 15;
     title = json['title'];
   }
 
